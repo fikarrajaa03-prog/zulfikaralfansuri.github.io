@@ -1,702 +1,1682 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Zulfikar Alfansuri | Premium Portfolio</title><meta name="description" content="Portfolio resmi Zulfikar Alfansuri, pelajar dari Jakarta yang tertarik pada teknologi, kreativitas, olahraga, dan pengembangan diri.">
-<meta name="keywords" content="Zulfikar Alfansuri, portfolio Zulfikar Alfansuri, Zulfikar Jakarta">
-<meta name="author" content="Zulfikar Alfansuri"><style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
+  <title>Zulfikar Alfansuri | Mission Portfolio</title>
 
-body{
-    font-family:'Inter',sans-serif;
-    background:#07070b;
-    color:#fff;
-    overflow-x:hidden;
-}
+  <meta name="description" content="Portfolio resmi Zulfikar Alfansuri, siswa SMA Negeri 78 Jakarta dengan minat pada teknologi, desain, olahraga, dan media digital.">
+  <meta name="keywords" content="Zulfikar Alfansuri, portfolio, SMA Negeri 78 Jakarta, student portfolio, technology, design, Jakarta">
+  <meta name="author" content="Zulfikar Alfansuri">
 
-body::before{
-    content:"";
-    position:fixed;
-    width:500px;
-    height:500px;
-    background:#6c5ce7;
-    filter:blur(180px);
-    opacity:.12;
-    top:-200px;
-    right:-150px;
-    z-index:-1;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-body::after{
-    content:"";
-    position:fixed;
-    width:400px;
-    height:400px;
-    background:#00c6ff;
-    filter:blur(180px);
-    opacity:.08;
-    bottom:-150px;
-    left:-150px;
-    z-index:-1;
-}
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
-/* NAVBAR */
+  <style>
 
-nav{
-    position:fixed;
-    top:18px;
-    left:50%;
-    transform:translateX(-50%);
-    width:90%;
-    max-width:1100px;
-    padding:15px 22px;
-    border:1px solid rgba(255,255,255,.08);
-    background:rgba(15,15,22,.72);
-    backdrop-filter:blur(20px);
-    border-radius:18px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    z-index:1000;
-}
-
-.logo{
-    font-size:20px;
-    font-weight:800;
-}
-
-.logo span{
-    color:#8b7cff;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:25px;
-}
-
-nav a{
-    color:#aaa;
-    text-decoration:none;
-    font-size:13px;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:white;
-}
-
-/* HERO */
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:120px 20px 70px;
-}
-
-.badge{
-    display:inline-block;
-    padding:8px 15px;
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:50px;
-    color:#aaa;
-    font-size:12px;
-    background:rgba(255,255,255,.03);
-    margin-bottom:25px;
-}
-
-.hero h1{
-    font-size:clamp(50px,9vw,100px);
-    line-height:1;
-    letter-spacing:-5px;
-    margin-bottom:25px;
-}
-
-.gradient{
-    background:linear-gradient(90deg,#fff,#8d80ff);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
-
-.hero p{
-    max-width:650px;
-    margin:auto;
-    color:#90909d;
-    font-size:16px;
-    line-height:1.8;
-}
-
-.buttons{
-    margin-top:35px;
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    padding:14px 23px;
-    border-radius:12px;
-    text-decoration:none;
-    font-size:14px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.primary{
-    background:#fff;
-    color:#08080b;
-}
-
-.primary:hover{
-    transform:translateY(-3px);
-    box-shadow:0 10px 30px rgba(255,255,255,.12);
-}
-
-.secondary{
-    border:1px solid rgba(255,255,255,.12);
-    color:#fff;
-    background:rgba(255,255,255,.03);
-}
-
-.secondary:hover{
-    background:rgba(255,255,255,.08);
-}
-
-/* GENERAL */
-
-section{
-    padding:110px 8%;
-}
-
-.container{
-    max-width:1100px;
-    margin:auto;
-}
-
-.label{
-    color:#8175ff;
-    font-size:12px;
-    font-weight:700;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    margin-bottom:12px;
-}
-
-.title{
-    font-size:42px;
-    letter-spacing:-2px;
-    margin-bottom:18px;
-}
-
-.subtitle{
-    color:#858591;
-    max-width:600px;
-    line-height:1.8;
-}
-
-/* ABOUT */
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
-    margin-top:40px;
-}
-
-.glass{
-    background:linear-gradient(
-        145deg,
-        rgba(255,255,255,.07),
-        rgba(255,255,255,.025)
-    );
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:24px;
-    padding:30px;
-    backdrop-filter:blur(15px);
-}
-
-.glass p{
-    color:#9999a5;
-    line-height:1.8;
-}
-
-.info{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-}
-
-.info-box{
-    padding:20px;
-    border-radius:17px;
-    background:rgba(255,255,255,.035);
-    border:1px solid rgba(255,255,255,.06);
-}
-
-.info-box small{
-    color:#70707b;
-}
-
-.info-box strong{
-    display:block;
-    margin-top:5px;
-}
-
-/* EDUCATION */
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-    margin-top:40px;
-}
-
-.card{
-    padding:28px;
-    border-radius:22px;
-    background:rgba(255,255,255,.035);
-    border:1px solid rgba(255,255,255,.07);
-    transition:.35s;
-}
-
-.card:hover{
-    transform:translateY(-7px);
-    border-color:rgba(141,128,255,.5);
-    background:rgba(255,255,255,.06);
-}
-
-.card-number{
-    color:#7065ff;
-    font-size:13px;
-    font-weight:bold;
-    margin-bottom:35px;
-}
-
-.card h3{
-    font-size:19px;
-    margin-bottom:10px;
-}
-
-.card p{
-    color:#858591;
-    font-size:14px;
-    line-height:1.7;
-}
-
-/* SKILLS */
-
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-    margin-top:35px;
-}
-
-.skill{
-    padding:13px 18px;
-    border:1px solid rgba(255,255,255,.09);
-    border-radius:50px;
-    color:#bbb;
-    background:rgba(255,255,255,.03);
-    font-size:13px;
-    transition:.3s;
-}
-
-.skill:hover{
-    color:white;
-    border-color:#7065ff;
-    transform:translateY(-3px);
-}
-
-/* PROJECT */
-
-.projects{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-    margin-top:40px;
-}
-
-.project{
-    min-height:230px;
-    padding:28px;
-    border-radius:22px;
-    border:1px solid rgba(255,255,255,.07);
-    background:linear-gradient(
-        145deg,
-        rgba(255,255,255,.06),
-        rgba(255,255,255,.02)
-    );
-    transition:.35s;
-}
-
-.project:hover{
-    transform:translateY(-7px);
-}
-
-.project-icon{
-    font-size:30px;
-    margin-bottom:35px;
-}
-
-.project h3{
-    margin-bottom:10px;
-}
-
-.project p{
-    color:#858591;
-    font-size:14px;
-    line-height:1.7;
-}
-
-/* CONTACT */
-
-.contact{
-    text-align:center;
-}
-
-.contact .glass{
-    max-width:800px;
-    margin:40px auto 0;
-    padding:60px 30px;
-}
-
-.instagram{
-    display:inline-block;
-    margin-top:25px;
-    padding:15px 25px;
-    border-radius:12px;
-    background:linear-gradient(90deg,#833ab4,#fd1d1d,#fcb045);
-    color:white;
-    text-decoration:none;
-    font-weight:700;
-    transition:.3s;
-}
-
-.instagram:hover{
-    transform:translateY(-4px);
-    box-shadow:0 12px 35px rgba(253,29,29,.2);
-}
-
-/* FOOTER */
-
-footer{
-    text-align:center;
-    padding:30px;
-    border-top:1px solid rgba(255,255,255,.06);
-    color:#555561;
-    font-size:12px;
-}
-
-/* ANIMATION */
-
-.fade{
-    animation:fadeUp 1s ease both;
-}
-
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(25px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-/* MOBILE */
-
-@media(max-width:800px){
-
-    nav{
-        width:94%;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
-    nav ul{
-        display:none;
+    :root {
+      --blue: #4da3ff;
+      --blue2: #0066ff;
+      --cyan: #00d9ff;
+      --white: #f4f8ff;
+      --muted: #8795aa;
+      --panel: rgba(8, 18, 32, .72);
+      --border: rgba(100, 180, 255, .18);
     }
 
-    section{
-        padding:80px 6%;
+    body {
+      background: #02060c;
+      color: var(--white);
+      font-family: "Inter", sans-serif;
+      overflow-x: hidden;
     }
 
-    .hero h1{
-        font-size:55px;
-        letter-spacing:-3px;
+    /* ==============================
+       SPACE BACKGROUND
+    ============================== */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -10;
+
+      background:
+        radial-gradient(circle at 50% 20%,
+        rgba(0, 105, 255, .18),
+        transparent 30%),
+
+        radial-gradient(circle at 10% 80%,
+        rgba(0, 220, 255, .08),
+        transparent 25%),
+
+        radial-gradient(circle at 90% 70%,
+        rgba(80, 60, 255, .1),
+        transparent 25%);
     }
 
-    .about-grid,
-    .cards,
-    .projects{
-        grid-template-columns:1fr;
+    .stars {
+      position: fixed;
+      inset: 0;
+      z-index: -9;
+      pointer-events: none;
+
+      background-image:
+        radial-gradient(circle, white 1px, transparent 1px),
+        radial-gradient(circle, rgba(100,180,255,.7) 1px, transparent 1px);
+
+      background-size: 110px 110px, 180px 180px;
+      background-position: 20px 30px, 70px 100px;
+
+      opacity: .35;
     }
 
-    .title{
-        font-size:34px;
+    /* ==============================
+       SCANLINES
+    ============================== */
+
+    .scanlines {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+
+      background: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 3px,
+        rgba(255,255,255,.012) 4px
+      );
     }
-}
-</style></head><body><!-- NAVIGATION --><nav>
-    <div class="logo">Zulfikar<span>.</span></div><ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-</ul>
 
-</nav><!-- HERO --><section class="hero"><div class="fade"><div class="badge">
-    ✦ PERSONAL PORTFOLIO • 2026
-</div>
+    /* ==============================
+       NAVIGATION
+    ============================== */
 
-<h1>
-    Zulfikar<br>
-    <span class="gradient">Alfansuri</span>
-</h1>
+    nav {
+      position: fixed;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
 
-<p>
-    Student, creative thinker, and technology enthusiast
-    from Jakarta. Welcome to my personal digital portfolio.
-</p>
+      width: min(1150px, 94%);
 
-<div class="buttons">
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-    <a href="#projects" class="btn primary">
-        Explore My Work
-    </a>
+      padding: 12px 18px;
 
-    <a href="#contact" class="btn secondary">
-        Contact Me
-    </a>
+      background: rgba(3, 10, 18, .78);
+      backdrop-filter: blur(18px);
 
-</div>
+      border: 1px solid var(--border);
 
-</div></section><!-- ABOUT --><section id="about"><div class="container"><div class="label">01 — About Me</div>
+      z-index: 1000;
+    }
 
-<h2 class="title">
-    Mengenal Zulfikar
-</h2>
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-<p class="subtitle">
-    Saya adalah seorang pelajar yang memiliki ketertarikan
-    terhadap teknologi, kreativitas, olahraga, dan berbagai
-    aktivitas yang membantu saya berkembang.
-</p>
+    .mission-logo {
+      width: 38px;
+      height: 38px;
+
+      display: grid;
+      place-items: center;
+
+      border: 1px solid rgba(80,170,255,.5);
+      background: rgba(0,100,255,.12);
+
+      font-family: "Orbitron";
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .brand-text {
+      font-family: "Orbitron";
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .brand-text span {
+      color: var(--blue);
+    }
+
+    nav ul {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    nav a {
+      color: #9cabc0;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .5px;
+      transition: .3s;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    .nav-status {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+
+      color: #71e6a0;
+      font-size: 10px;
+      font-family: "Orbitron";
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #49df87;
+      box-shadow: 0 0 12px #49df87;
+    }
+
+    /* ==============================
+       HERO
+    ============================== */
+
+    .hero {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+
+      padding: 130px 20px 80px;
+
+      overflow: hidden;
+    }
+
+    .hero-content {
+      width: min(1100px, 100%);
+      position: relative;
+      z-index: 3;
+    }
+
+    .mission-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      padding: 9px 14px;
+
+      border: 1px solid rgba(80,170,255,.3);
+      background: rgba(0,90,200,.08);
+
+      font-family: "Orbitron";
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      color: #8bbfff;
+    }
+
+    .mission-tag span {
+      color: #50e18b;
+    }
+
+    .hero-grid {
+      margin-top: 35px;
+
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 50px;
+
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-family: "Orbitron";
+      font-size: clamp(45px, 7vw, 82px);
+      line-height: 1;
+      letter-spacing: -3px;
+    }
+
+    .hero h1 .blue {
+      color: var(--blue);
+      text-shadow: 0 0 30px rgba(70,160,255,.3);
+    }
+
+    .hero-subtitle {
+      margin-top: 25px;
+
+      max-width: 650px;
+
+      color: var(--muted);
+
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .hero-buttons {
+      margin-top: 32px;
+
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 13px 20px;
+
+      text-decoration: none;
+
+      font-size: 11px;
+      font-family: "Orbitron";
+      letter-spacing: .7px;
+
+      transition: .3s;
+    }
+
+    .btn-primary {
+      background: var(--blue2);
+      color: white;
+
+      border: 1px solid #4596ff;
+
+      box-shadow: 0 0 25px rgba(0,100,255,.2);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 0 35px rgba(0,130,255,.45);
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      color: #9eb7d4;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.02);
+    }
+
+    .btn-outline:hover {
+      border-color: rgba(80,170,255,.5);
+      color: white;
+    }
+
+    /* ==============================
+       PLANET
+    ============================== */
+
+    .planet-system {
+      position: relative;
+
+      width: 430px;
+      height: 430px;
+
+      margin: auto;
+    }
+
+    .planet {
+      position: absolute;
+
+      width: 210px;
+      height: 210px;
+
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%, -50%);
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(circle at 30% 25%,
+        #c7edff,
+        #4189c7 30%,
+        #123d69 65%,
+        #061423 100%);
+
+      box-shadow:
+        -20px -15px 35px rgba(150,220,255,.15),
+        20px 15px 60px rgba(0,0,0,.8),
+        0 0 60px rgba(30,130,255,.18);
+    }
+
+    .planet::after {
+      content: "";
+
+      position: absolute;
+
+      width: 280px;
+      height: 75px;
+
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%, -50%) rotate(-18deg);
+
+      border: 1px solid rgba(110,190,255,.35);
+
+      border-radius: 50%;
+    }
+
+    .orbit {
+      position: absolute;
+
+      width: 360px;
+      height: 130px;
+
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%, -50%) rotate(-18deg);
+
+      border: 1px solid rgba(90,180,255,.2);
+
+      border-radius: 50%;
+
+      animation: orbit 15s linear infinite;
+    }
+
+    .orbit::after {
+      content: "";
+
+      position: absolute;
+
+      width: 8px;
+      height: 8px;
+
+      background: var(--cyan);
+      border-radius: 50%;
+
+      top: -4px;
+      left: 50%;
+
+      box-shadow: 0 0 20px var(--cyan);
+    }
+
+    @keyframes orbit {
+      from {
+        transform: translate(-50%, -50%) rotate(-18deg);
+      }
+
+      to {
+        transform: translate(-50%, -50%) rotate(342deg);
+      }
+    }
+
+    .planet-label {
+      position: absolute;
+
+      bottom: 15px;
+      left: 50%;
+
+      transform: translateX(-50%);
+
+      font-family: "Orbitron";
+      font-size: 9px;
+      color: #66809b;
+      letter-spacing: 2px;
+    }
+
+    /* ==============================
+       MISSION BAR
+    ============================== */
+
+    .mission-bar {
+      width: min(1100px, 90%);
+
+      margin: -35px auto 0;
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      border: 1px solid var(--border);
+
+      background: rgba(5,15,26,.7);
+
+      backdrop-filter: blur(15px);
+    }
+
+    .mission-data {
+      padding: 20px;
+
+      border-right: 1px solid var(--border);
+    }
+
+    .mission-data:last-child {
+      border-right: none;
+    }
+
+    .mission-data small {
+      display: block;
+
+      color: #63758b;
+
+      font-family: "Orbitron";
+      font-size: 8px;
+
+      letter-spacing: 1px;
+
+      margin-bottom: 8px;
+    }
+
+    .mission-data strong {
+      font-family: "Orbitron";
+      font-size: 14px;
+    }
+
+    .green {
+      color: #52e395;
+    }
+
+    .blue {
+      color: var(--blue);
+    }
+
+    /* ==============================
+       SECTIONS
+    ============================== */
+
+    section {
+      width: min(1100px, 90%);
+
+      margin: auto;
+
+      padding: 110px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+
+      margin-bottom: 35px;
+
+      border-bottom: 1px solid rgba(100,180,255,.12);
+
+      padding-bottom: 18px;
+    }
+
+    .section-heading small {
+      color: var(--blue);
+
+      font-family: "Orbitron";
+      font-size: 9px;
+
+      letter-spacing: 2px;
+    }
+
+    .section-heading h2 {
+      margin-top: 7px;
+
+      font-family: "Orbitron";
+      font-size: 28px;
+    }
+
+    .section-number {
+      color: #30465e;
+
+      font-family: "Orbitron";
+      font-size: 30px;
+    }
+
+    /* ==============================
+       PANELS
+    ============================== */
+
+    .panel {
+      background: var(--panel);
+
+      border: 1px solid var(--border);
+
+      padding: 30px;
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .panel::before {
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+      left: 0;
+
+      width: 40px;
+      height: 2px;
+
+      background: var(--blue);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 20px;
+    }
+
+    .panel h3 {
+      font-family: "Orbitron";
+      font-size: 15px;
+
+      margin-bottom: 15px;
+    }
+
+    .panel p {
+      color: var(--muted);
+
+      line-height: 1.8;
+
+      font-size: 14px;
+    }
+
+    /* ==============================
+       CREW PROFILE
+    ============================== */
+
+    .crew-card {
+      display: grid;
+
+      grid-template-columns: 130px 1fr;
+
+      gap: 30px;
+
+      align-items: center;
+    }
+
+    .crew-avatar {
+      width: 130px;
+      height: 130px;
+
+      border-radius: 50%;
+
+      display: grid;
+      place-items: center;
+
+      background:
+        radial-gradient(circle,
+        #173f67,
+        #061321 70%);
+
+      border: 1px solid rgba(90,180,255,.35);
+
+      font-family: "Orbitron";
+      font-size: 25px;
+
+      color: #72b9ff;
+
+      box-shadow:
+        inset 0 0 30px rgba(0,120,255,.15),
+        0 0 30px rgba(0,100,255,.08);
+    }
+
+    .crew-info span {
+      color: #5e7893;
+
+      font-family: "Orbitron";
+      font-size: 9px;
+
+      letter-spacing: 1px;
+    }
+
+    .crew-info h3 {
+      margin: 7px 0 10px;
+
+      font-size: 22px;
+    }
+
+    .crew-info p {
+      margin-bottom: 15px;
+    }
+
+    .crew-id {
+      display: inline-block;
+
+      padding: 6px 10px;
+
+      border: 1px solid rgba(80,170,255,.18);
+
+      color: #6da9dd;
+
+      font-family: "Orbitron";
+      font-size: 8px;
+    }
+
+    /* ==============================
+       EDUCATION
+    ============================== */
+
+    .education {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 15px;
+    }
+
+    .edu {
+      padding: 25px;
+
+      background: rgba(7,17,29,.7);
+
+      border: 1px solid var(--border);
+
+      transition: .3s;
+    }
+
+    .edu:hover {
+      border-color: rgba(80,170,255,.5);
+
+      transform: translateY(-5px);
+    }
+
+    .edu-year {
+      color: var(--blue);
+
+      font-family: "Orbitron";
+
+      font-size: 9px;
+
+      letter-spacing: 1px;
+    }
+
+    .edu h3 {
+      margin: 14px 0 8px;
+
+      font-size: 16px;
+    }
+
+    .edu p {
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.6;
+    }
+
+    /* ==============================
+       SYSTEMS / SKILLS
+    ============================== */
+
+    .systems {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 15px;
+    }
+
+    .system {
+      min-height: 170px;
+
+      padding: 22px;
+
+      background: rgba(6,16,27,.75);
+
+      border: 1px solid var(--border);
+
+      position: relative;
+
+      transition: .3s;
+    }
+
+    .system:hover {
+      transform: translateY(-6px);
+
+      border-color: rgba(70,170,255,.5);
+
+      box-shadow: 0 15px 40px rgba(0,80,180,.12);
+    }
+
+    .system-icon {
+      font-size: 27px;
+
+      margin-bottom: 20px;
+    }
+
+    .system h3 {
+      font-family: "Orbitron";
+
+      font-size: 12px;
+
+      margin-bottom: 9px;
+    }
+
+    .system p {
+      color: #718196;
+
+      font-size: 11px;
+
+      line-height: 1.6;
+    }
+
+    .system-status {
+      position: absolute;
+
+      top: 15px;
+      right: 15px;
+
+      color: #4de28a;
+
+      font-family: "Orbitron";
+
+      font-size: 7px;
+    }
+
+    /* ==============================
+       MISSIONS
+    ============================== */
+
+    .missions {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .mission {
+      padding: 28px;
+
+      min-height: 230px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(10,28,48,.9),
+          rgba(4,10,18,.9)
+        );
+
+      border: 1px solid var(--border);
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .mission::after {
+      content: "";
+
+      position: absolute;
+
+      width: 100px;
+      height: 100px;
+
+      right: -40px;
+      bottom: -40px;
+
+      border: 1px solid rgba(60,160,255,.12);
+
+      transform: rotate(45deg);
+    }
+
+    .mission-code {
+      color: var(--blue);
+
+      font-family: "Orbitron";
+
+      font-size: 9px;
+
+      letter-spacing: 1px;
+    }
+
+    .mission h3 {
+      margin: 20px 0 12px;
+
+      font-family: "Orbitron";
+
+      font-size: 15px;
+    }
+
+    .mission p {
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.7;
+    }
+
+    .mission-state {
+      position: absolute;
+
+      bottom: 20px;
+      left: 28px;
+
+      font-family: "Orbitron";
+
+      font-size: 8px;
+
+      color: #4de28a;
+    }
+
+    /* ==============================
+       CONTACT
+    ============================== */
+
+    .contact-panel {
+      text-align: center;
+
+      padding: 70px 30px;
+    }
+
+    .contact-panel h2 {
+      font-family: "Orbitron";
+
+      font-size: clamp(25px, 5vw, 45px);
+
+      margin-bottom: 15px;
+    }
+
+    .contact-panel p {
+      max-width: 600px;
+
+      margin: 0 auto 30px;
+
+      color: var(--muted);
+
+      line-height: 1.7;
+    }
+
+    /* ==============================
+       FOOTER
+    ============================== */
+
+    footer {
+      padding: 35px 20px;
+
+      border-top: 1px solid rgba(100,180,255,.1);
+
+      text-align: center;
+
+      color: #4e6075;
+
+      font-size: 10px;
+
+      font-family: "Orbitron";
+
+      letter-spacing: 1px;
+    }
+
+    footer span {
+      color: var(--blue);
+    }
+
+    /* ==============================
+       MOBILE
+    ============================== */
+
+    @media(max-width: 850px) {
+
+      nav ul {
+        display: none;
+      }
+
+      .nav-status {
+        display: none;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .planet-system {
+        width: 350px;
+        height: 350px;
+      }
+
+      .mission-bar {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .mission-data:nth-child(2) {
+        border-right: none;
+      }
+
+      .mission-data:nth-child(-n+2) {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .education {
+        grid-template-columns: 1fr;
+      }
+
+      .systems {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .missions {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width: 500px) {
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .planet-system {
+        width: 300px;
+        height: 300px;
+      }
+
+      .planet {
+        width: 150px;
+        height: 150px;
+      }
+
+      .orbit {
+        width: 260px;
+        height: 100px;
+      }
+
+      .mission-bar {
+        grid-template-columns: 1fr;
+      }
+
+      .mission-data {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .mission-data:last-child {
+        border-bottom: none;
+      }
+
+      .systems {
+        grid-template-columns: 1fr;
+      }
+
+      .crew-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .crew-avatar {
+        margin: auto;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="stars"></div>
+  <div class="scanlines"></div>
 
 
-<div class="about-grid">
+  <!-- ==========================
+       NAVIGATION
+  =========================== -->
 
-    <div class="glass">
+  <nav>
 
-        <h3 style="margin-bottom:15px;">
-            Hello, I'm Zulfikar 👋
-        </h3>
+    <div class="brand">
 
-        <p>
-            Website ini merupakan portfolio pribadi saya.
-            Di sini saya membagikan profil, pendidikan,
-            kemampuan, proyek, dan berbagai kegiatan
-            yang pernah saya ikuti.
-        </p>
+      <div class="mission-logo">
+        ZA
+      </div>
+
+      <div class="brand-text">
+        ZULFIKAR<span>/MISSION</span>
+      </div>
 
     </div>
 
 
-    <div class="glass">
+    <ul>
 
-        <div class="info">
+      <li>
+        <a href="#about">PROFILE</a>
+      </li>
 
-            <div class="info-box">
-                <small>Nama</small>
-                <strong>Zulfikar Alfansuri</strong>
-            </div>
+      <li>
+        <a href="#education">EDUCATION</a>
+      </li>
 
-            <div class="info-box">
-                <small>Domisili</small>
-                <strong>Jakarta</strong>
-            </div>
+      <li>
+        <a href="#systems">SYSTEMS</a>
+      </li>
 
-            <div class="info-box">
-                <small>Status</small>
-                <strong>Student</strong>
-            </div>
+      <li>
+        <a href="#missions">MISSIONS</a>
+      </li>
 
-            <div class="info-box">
-                <small>Interest</small>
-                <strong>Technology</strong>
-            </div>
+      <li>
+        <a href="#contact">CONTACT</a>
+      </li>
+
+    </ul>
+
+
+    <div class="nav-status">
+
+      <div class="status-dot"></div>
+
+      SYSTEM ONLINE
+
+    </div>
+
+  </nav>
+
+
+  <!-- ==========================
+       HERO
+  =========================== -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <div class="mission-tag">
+        <span>●</span>
+        MISSION CONTROL / PERSONAL PORTFOLIO
+      </div>
+
+
+      <div class="hero-grid">
+
+        <div>
+
+          <h1>
+            ZULFIKAR<br>
+            <span class="blue">ALFANSURI</span>
+          </h1>
+
+
+          <p class="hero-subtitle">
+
+            Student of SMA Negeri 78 Jakarta.
+            Exploring technology, creative design,
+            digital media, sports, and the future.
+
+            <br><br>
+
+            <strong style="color:#b8c9dc;">
+              "Explore. Learn. Create. Go Beyond."
+            </strong>
+
+          </p>
+
+
+          <div class="hero-buttons">
+
+            <a href="#about" class="btn btn-primary">
+              START MISSION
+            </a>
+
+            <a
+              href="https://www.instagram.com/karralsr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline">
+
+              OPEN COMMUNICATION
+
+            </a>
+
+          </div>
 
         </div>
 
+
+        <!-- PLANET -->
+
+        <div class="planet-system">
+
+          <div class="orbit"></div>
+
+          <div class="planet"></div>
+
+          <div class="planet-label">
+            EARTH / HOME PLANET
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
 
-</div>
-
-</div></section><!-- EDUCATION --><section id="education"><div class="container"><div class="label">02 — Education</div>
-
-<h2 class="title">
-    Riwayat Pendidikan
-</h2>
-
-<p class="subtitle">
-    Perjalanan pendidikan yang telah saya tempuh.
-</p>
+  </header>
 
 
-<div class="cards">
+  <!-- ==========================
+       MISSION STATUS
+  =========================== -->
 
-    <div class="card">
-        <div class="card-number">01</div>
-        <h3>SMA Negeri 78 Jakarta</h3>
+  <div class="mission-bar">
+
+    <div class="mission-data">
+
+      <small>MISSION STATUS</small>
+
+      <strong class="green">
+        ● ACTIVE
+      </strong>
+
+    </div>
+
+
+    <div class="mission-data">
+
+      <small>CURRENT BASE</small>
+
+      <strong>
+        JAKARTA, ID
+      </strong>
+
+    </div>
+
+
+    <div class="mission-data">
+
+      <small>CREW MEMBER</small>
+
+      <strong>
+        ZA-001
+      </strong>
+
+    </div>
+
+
+    <div class="mission-data">
+
+      <small>MISSION TYPE</small>
+
+      <strong class="blue">
+        EXPLORER
+      </strong>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==========================
+       ABOUT
+  =========================== -->
+
+  <section id="about">
+
+    <div class="section-heading">
+
+      <div>
+
+        <small>
+          MISSION FILE 01
+        </small>
+
+        <h2>
+          CREW PROFILE
+        </h2>
+
+      </div>
+
+      <div class="section-number">
+        01
+      </div>
+
+    </div>
+
+
+    <div class="panel crew-card">
+
+      <div class="crew-avatar">
+        ZA
+      </div>
+
+
+      <div class="crew-info">
+
+        <span>
+          CREW MEMBER / STUDENT
+        </span>
+
+        <h3>
+          Zulfikar Alfansuri
+        </h3>
+
         <p>
-            Pendidikan sekolah menengah atas.
+
+          Saya adalah pelajar yang saat ini menempuh
+          pendidikan di SMA Negeri 78 Jakarta.
+
+          Saya memiliki ketertarikan pada teknologi,
+          desain, editing, media digital, olahraga,
+          dan berbagai hal kreatif.
+
         </p>
+
+        <div class="crew-id">
+          ID : ZULFIKAR-ALFANSURI-001
+        </div>
+
+      </div>
+
     </div>
 
-    <div class="card">
-        <div class="card-number">02</div>
-        <h3>SMP Negeri 127 Jakarta</h3>
-        <p>
-            Pendidikan sekolah menengah pertama.
-        </p>
+  </section>
+
+
+  <!-- ==========================
+       EDUCATION
+  =========================== -->
+
+  <section id="education">
+
+    <div class="section-heading">
+
+      <div>
+
+        <small>
+          MISSION FILE 02
+        </small>
+
+        <h2>
+          EDUCATION LOG
+        </h2>
+
+      </div>
+
+      <div class="section-number">
+        02
+      </div>
+
     </div>
 
-    <div class="card">
-        <div class="card-number">03</div>
-        <h3>SD Negeri Kebon Jeruk 04 Pagi</h3>
-        <p>
-            Pendidikan sekolah dasar.
-        </p>
-    </div>
 
-</div>
-
-</div></section><!-- SKILLS --><section id="skills"><div class="container"><div class="label">03 — Skills</div>
-
-<h2 class="title">
-    Skills & Interests
-</h2>
-
-<p class="subtitle">
-    Beberapa bidang yang saya minati dan terus saya kembangkan.
-</p>
+    <div class="education">
 
 
-<div class="skills">
+      <div class="edu">
 
-    <div class="skill">💻 Technology</div>
-    <div class="skill">🎨 Creative Design</div>
-    <div class="skill">🎬 Video Editing</div>
-    <div class="skill">📷 Photo Editing</div>
-    <div class="skill">🏀 Sports</div>
-    <div class="skill">🌐 Digital Media</div>
-    <div class="skill">🤝 Teamwork</div>
-    <div class="skill">🎤 Public Speaking</div>
+        <div class="edu-year">
+          EDUCATION 01
+        </div>
 
-</div>
-
-</div></section><!-- PROJECTS --><section id="projects"><div class="container"><div class="label">04 — Projects</div>
-
-<h2 class="title">
-    Projects & Activities
-</h2>
-
-<p class="subtitle">
-    Beberapa proyek dan kegiatan yang pernah saya kerjakan
-    atau ikuti.
-</p>
-
-
-<div class="projects">
-
-    <div class="project">
-
-        <div class="project-icon">🌐</div>
-
-        <h3>Personal Portfolio</h3>
+        <h3>
+          SD Negeri Kebon Jeruk 04 Pagi
+        </h3>
 
         <p>
-            Membuat website portfolio pribadi menggunakan
-            HTML dan CSS dengan desain modern.
+          Pendidikan dasar dan awal perjalanan
+          pembelajaran.
         </p>
 
-    </div>
+      </div>
 
 
-    <div class="project">
+      <div class="edu">
 
-        <div class="project-icon">📚</div>
+        <div class="edu-year">
+          EDUCATION 02
+        </div>
 
-        <h3>School Projects</h3>
+        <h3>
+          SMP Negeri 127 Jakarta
+        </h3>
 
         <p>
-            Berbagai tugas, presentasi, dan proyek sekolah
-            yang dikerjakan secara individu maupun kelompok.
+          Perjalanan pendidikan tingkat
+          sekolah menengah pertama.
         </p>
 
-    </div>
+      </div>
 
 
-    <div class="project">
+      <div class="edu">
 
-        <div class="project-icon">🏆</div>
+        <div class="edu-year">
+          CURRENT / ACTIVE
+        </div>
 
-        <h3>Sports Activities</h3>
+        <h3>
+          SMA Negeri 78 Jakarta
+        </h3>
 
         <p>
-            Mengikuti kegiatan dan proyek olahraga
-            dalam pembelajaran maupun aktivitas sekolah.
+          Pendidikan saat ini dan tempat
+          melanjutkan eksplorasi masa depan.
         </p>
+
+      </div>
+
 
     </div>
 
-</div>
-
-</div></section><!-- CONTACT --><section id="contact"><div class="container contact"><div class="label">05 — Contact</div>
-
-<h2 class="title">
-    Let's Connect
-</h2>
-
-<p class="subtitle" style="margin:auto;">
-    Untuk melihat aktivitas dan informasi terbaru,
-    kunjungi Instagram saya.
-</p>
+  </section>
 
 
-<div class="glass">
+  <!-- ==========================
+       SYSTEMS / SKILLS
+  =========================== -->
 
-    <h3>
-        Zulfikar Alfansuri
-    </h3>
+  <section id="systems">
 
-    <p style="margin-top:10px;color:#858591;">
-        Instagram
-    </p>
+    <div class="section-heading">
 
-    <a
+      <div>
+
+        <small>
+          MISSION FILE 03
+        </small>
+
+        <h2>
+          MISSION SYSTEMS
+        </h2>
+
+      </div>
+
+      <div class="section-number">
+        03
+      </div>
+
+    </div>
+
+
+    <div class="systems">
+
+
+      <div class="system">
+
+        <div class="system-status">
+          ONLINE
+        </div>
+
+        <div class="system-icon">
+          💻
+        </div>
+
+        <h3>
+          TECHNOLOGY
+        </h3>
+
+        <p>
+          Exploring digital technology
+          and modern tools.
+        </p>
+
+      </div>
+
+
+      <div class="system">
+
+        <div class="system-status">
+          ONLINE
+        </div>
+
+        <div class="system-icon">
+          🎨
+        </div>
+
+        <h3>
+          CREATIVE DESIGN
+        </h3>
+
+        <p>
+          Visual creativity and
+          digital design exploration.
+        </p>
+
+      </div>
+
+
+      <div class="system">
+
+        <div class="system-status">
+          ONLINE
+        </div>
+
+        <div class="system-icon">
+          🎬
+        </div>
+
+        <h3>
+          MEDIA EDITING
+        </h3>
+
+        <p>
+          Photo and video editing
+          for digital projects.
+        </p>
+
+      </div>
+
+
+      <div class="system">
+
+        <div class="system-status">
+          ACTIVE
+        </div>
+
+        <div class="system-icon">
+          🏀
+        </div>
+
+        <h3>
+          SPORTS
+        </h3>
+
+        <p>
+          Basketball, physical activity,
+          teamwork and competition.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- ==========================
+       MISSIONS
+  =========================== -->
+
+  <section id="missions">
+
+    <div class="section-heading">
+
+      <div>
+
+        <small>
+          MISSION FILE 04
+        </small>
+
+        <h2>
+          MISSION LOG
+        </h2>
+
+      </div>
+
+      <div class="section-number">
+        04
+      </div>
+
+    </div>
+
+
+    <div class="missions">
+
+
+      <div class="mission">
+
+        <div class="mission-code">
+          MISSION / ZA-001
+        </div>
+
+        <h3>
+          PERSONAL PORTFOLIO
+        </h3>
+
+        <p>
+
+          Developing a personal website
+          to document my journey,
+          skills, education and projects.
+
+        </p>
+
+        <div class="mission-state">
+          STATUS : ACTIVE
+        </div>
+
+      </div>
+
+
+      <div class="mission">
+
+        <div class="mission-code">
+          MISSION / ZA-002
+        </div>
+
+        <h3>
+          DIGITAL CREATIVE
+        </h3>
+
+        <p>
+
+          Exploring photo editing,
+          video editing and digital
+          visual creativity.
+
+        </p>
+
+        <div class="mission-state">
+          STATUS : EXPLORING
+        </div>
+
+      </div>
+
+
+      <div class="mission">
+
+        <div class="mission-code">
+          MISSION / ZA-003
+        </div>
+
+        <h3>
+          SCHOOL PROJECTS
+        </h3>
+
+        <p>
+
+          Creating and completing
+          various academic and
+          creative school projects.
+
+        </p>
+
+        <div class="mission-state">
+          STATUS : ONGOING
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- ==========================
+       CONTACT
+  =========================== -->
+
+  <section id="contact">
+
+    <div class="panel contact-panel">
+
+      <small style="
+        color:#4da3ff;
+        font-family:Orbitron;
+        font-size:9px;
+        letter-spacing:2px;
+      ">
+        COMMUNICATION CHANNEL
+      </small>
+
+
+      <h2>
+        ESTABLISH CONTACT
+      </h2>
+
+
+      <p>
+
+        Want to connect, collaborate,
+        or explore my work?
+
+        Open the communication channel
+        below.
+
+      </p>
+
+
+      <a
         href="https://www.instagram.com/karralsr/"
         target="_blank"
         rel="noopener noreferrer"
-        class="instagram">
+        class="btn btn-primary">
 
-        Instagram @karralsr
+        @KARRALSR
 
-    </a>
+      </a>
 
-</div>
+    </div>
 
-</div></section><!-- FOOTER --><footer>© 2026 Zulfikar Alfansuri — Personal Portfolio
+  </section>
 
-</footer></body>
-  </html>
+
+  <!-- ==========================
+       FOOTER
+  =========================== -->
+
+  <footer>
+
+    MISSION ZA-001 · ZULFIKAR ALFANSURI ·
+
+    <span>
+      SMA NEGERI 78 JAKARTA
+    </span>
+
+    <br><br>
+
+    SYSTEM ONLINE · 2026
+
+  </footer>
+
+</body>
+    </html>
