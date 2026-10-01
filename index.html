@@ -1,376 +1,702 @@
 <!DOCTYPE html><html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Zulfikar Alfansuri | Portfolio & Profil</title><meta name="description"
-content="Portofolio Zulfikar Alfansuri, pelajar dari Jakarta. Lihat profil, pendidikan, kemampuan, proyek, kegiatan, dan informasi Zulfikar Alfansuri.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Zulfikar Alfansuri | Premium Portfolio</title><meta name="description" content="Portfolio resmi Zulfikar Alfansuri, pelajar dari Jakarta yang tertarik pada teknologi, kreativitas, olahraga, dan pengembangan diri.">
+<meta name="keywords" content="Zulfikar Alfansuri, portfolio Zulfikar Alfansuri, Zulfikar Jakarta">
+<meta name="author" content="Zulfikar Alfansuri"><style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-<meta name="keywords"
-content="Zulfikar Alfansuri, Zulfikar Alfansuri Portfolio, Portofolio Zulfikar Alfansuri, Zulfikar Jakarta, pelajar Jakarta">
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
 
-  <meta name="author" content="Zulfikar Alfansuri">  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
+body{
+    font-family:'Inter',sans-serif;
+    background:#07070b;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#6c5ce7;
+    filter:blur(180px);
+    opacity:.12;
+    top:-200px;
+    right:-150px;
+    z-index:-1;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:400px;
+    height:400px;
+    background:#00c6ff;
+    filter:blur(180px);
+    opacity:.08;
+    bottom:-150px;
+    left:-150px;
+    z-index:-1;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:18px;
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    max-width:1100px;
+    padding:15px 22px;
+    border:1px solid rgba(255,255,255,.08);
+    background:rgba(15,15,22,.72);
+    backdrop-filter:blur(20px);
+    border-radius:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#8b7cff;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:#aaa;
+    text-decoration:none;
+    font-size:13px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:white;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px 70px;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 15px;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:50px;
+    color:#aaa;
+    font-size:12px;
+    background:rgba(255,255,255,.03);
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:clamp(50px,9vw,100px);
+    line-height:1;
+    letter-spacing:-5px;
+    margin-bottom:25px;
+}
+
+.gradient{
+    background:linear-gradient(90deg,#fff,#8d80ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+    max-width:650px;
+    margin:auto;
+    color:#90909d;
+    font-size:16px;
+    line-height:1.8;
+}
+
+.buttons{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 23px;
+    border-radius:12px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.primary{
+    background:#fff;
+    color:#08080b;
+}
+
+.primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(255,255,255,.12);
+}
+
+.secondary{
+    border:1px solid rgba(255,255,255,.12);
+    color:#fff;
+    background:rgba(255,255,255,.03);
+}
+
+.secondary:hover{
+    background:rgba(255,255,255,.08);
+}
+
+/* GENERAL */
+
+section{
+    padding:110px 8%;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+.label{
+    color:#8175ff;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+.title{
+    font-size:42px;
+    letter-spacing:-2px;
+    margin-bottom:18px;
+}
+
+.subtitle{
+    color:#858591;
+    max-width:600px;
+    line-height:1.8;
+}
+
+/* ABOUT */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    margin-top:40px;
+}
+
+.glass{
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.07),
+        rgba(255,255,255,.025)
+    );
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:30px;
+    backdrop-filter:blur(15px);
+}
+
+.glass p{
+    color:#9999a5;
+    line-height:1.8;
+}
+
+.info{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.info-box{
+    padding:20px;
+    border-radius:17px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.06);
+}
+
+.info-box small{
+    color:#70707b;
+}
+
+.info-box strong{
+    display:block;
+    margin-top:5px;
+}
+
+/* EDUCATION */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:40px;
+}
+
+.card{
+    padding:28px;
+    border-radius:22px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.07);
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    border-color:rgba(141,128,255,.5);
+    background:rgba(255,255,255,.06);
+}
+
+.card-number{
+    color:#7065ff;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:35px;
+}
+
+.card h3{
+    font-size:19px;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#858591;
+    font-size:14px;
+    line-height:1.7;
+}
+
+/* SKILLS */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:35px;
+}
+
+.skill{
+    padding:13px 18px;
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:50px;
+    color:#bbb;
+    background:rgba(255,255,255,.03);
+    font-size:13px;
+    transition:.3s;
+}
+
+.skill:hover{
+    color:white;
+    border-color:#7065ff;
+    transform:translateY(-3px);
+}
+
+/* PROJECT */
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:40px;
+}
+
+.project{
+    min-height:230px;
+    padding:28px;
+    border-radius:22px;
+    border:1px solid rgba(255,255,255,.07);
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.06),
+        rgba(255,255,255,.02)
+    );
+    transition:.35s;
+}
+
+.project:hover{
+    transform:translateY(-7px);
+}
+
+.project-icon{
+    font-size:30px;
+    margin-bottom:35px;
+}
+
+.project h3{
+    margin-bottom:10px;
+}
+
+.project p{
+    color:#858591;
+    font-size:14px;
+    line-height:1.7;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact .glass{
+    max-width:800px;
+    margin:40px auto 0;
+    padding:60px 30px;
+}
+
+.instagram{
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 25px;
+    border-radius:12px;
+    background:linear-gradient(90deg,#833ab4,#fd1d1d,#fcb045);
+    color:white;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+}
+
+.instagram:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 35px rgba(253,29,29,.2);
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    border-top:1px solid rgba(255,255,255,.06);
+    color:#555561;
+    font-size:12px;
+}
+
+/* ANIMATION */
+
+.fade{
+    animation:fadeUp 1s ease both;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    nav{
+        width:94%;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #0b1020;
-      color: #fff;
-      line-height: 1.6;
+    nav ul{
+        display:none;
     }
 
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 18px 8%;
-      background: rgba(11,16,32,0.9);
-      backdrop-filter: blur(10px);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
+    section{
+        padding:80px 6%;
     }
 
-    nav .logo {
-      font-size: 22px;
-      font-weight: bold;
+    .hero h1{
+        font-size:55px;
+        letter-spacing:-3px;
     }
 
-    nav .logo span {
-      color: #6c63ff;
+    .about-grid,
+    .cards,
+    .projects{
+        grid-template-columns:1fr;
     }
 
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 25px;
+    .title{
+        font-size:34px;
     }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      color: #6c63ff;
-    }
-
-    section {
-      padding: 100px 8%;
-    }
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background:
-        radial-gradient(circle at top right, #25205c, transparent 40%),
-        radial-gradient(circle at bottom left, #152d50, transparent 40%);
-    }
-
-    .hero h1 {
-      font-size: clamp(42px, 8vw, 80px);
-      margin-bottom: 15px;
-    }
-
-    .hero h1 span {
-      color: #6c63ff;
-    }
-
-    .hero p {
-      max-width: 650px;
-      margin: auto;
-      color: #b9bfd3;
-      font-size: 18px;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 13px 25px;
-      background: #6c63ff;
-      color: white;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .button:hover {
-      transform: translateY(-3px);
-      background: #8179ff;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .section-title h2 {
-      font-size: 35px;
-    }
-
-    .section-title p {
-      color: #9299ae;
-    }
-
-    .about {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-      color: #c4c8d5;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .card {
-      background: #151b30;
-      padding: 28px;
-      border-radius: 18px;
-      border: 1px solid #252c45;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: #6c63ff;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-    }
-
-    .card p,
-    .card li {
-      color: #aeb4c8;
-    }
-
-    .project {
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .project-item {
-      background: #151b30;
-      padding: 25px;
-      margin-bottom: 18px;
-      border-radius: 15px;
-      border-left: 4px solid #6c63ff;
-    }
-
-    .contact {
-      text-align: center;
-      background: #0f1528;
-    }
-
-    .contact p {
-      color: #aeb4c8;
-      margin: 10px 0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: #080c18;
-      color: #777f96;
-      font-size: 14px;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        padding: 15px 5%;
-      }
-
-      nav ul {
-        display: none;
-      }
-
-      section {
-        padding: 80px 5%;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h1 {
-        font-size: 45px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-    }
-  </style></head><body>  <!-- NAVIGATION -->  <nav>
+}
+</style></head><body><!-- NAVIGATION --><nav>
     <div class="logo">Zulfikar<span>.</span></div><ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#about">Tentang</a></li>
-  <li><a href="#education">Pendidikan</a></li>
-  <li><a href="#skills">Skills</a></li>
-  <li><a href="#projects">Proyek</a></li>
-  <li><a href="#contact">Kontak</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
 </ul>
 
-  </nav>  <!-- HERO -->  <section class="hero" id="home">
-    <div>
-      <p>WELCOME TO MY PORTFOLIO</p>  <h1>Zulfikar <span>Alfansuri</span></h1>
-
-  <p>
-    Student • Creative • Technology Enthusiast
-  </p>
-
-  <p>
-    Portofolio digital Zulfikar Alfansuri yang berisi
-    profil, pendidikan, kemampuan, proyek, dan kegiatan.
-  </p>
-
-  <a href="#about" class="button">
-    Jelajahi Portofolio
-  </a>
+</nav><!-- HERO --><section class="hero"><div class="fade"><div class="badge">
+    ✦ PERSONAL PORTFOLIO • 2026
 </div>
 
-  </section>  <!-- ABOUT -->  <section id="about">
-    <div class="section-title">
-      <h2>Tentang Saya</h2>
-      <p>About Zulfikar Alfansuri</p>
-    </div><div class="about">
-  <p>
-    Halo! Saya <strong>Zulfikar Alfansuri</strong>, seorang pelajar
-    yang berdomisili di Jakarta. Saya memiliki ketertarikan pada
-    teknologi, olahraga, kreativitas, desain, dan berbagai kegiatan
-    sekolah.
-  </p>
-
-  <br>
-
-  <p>
-    Website ini dibuat sebagai portofolio digital untuk
-    memperkenalkan profil, pendidikan, kemampuan, proyek,
-    serta pengalaman yang saya miliki.
-  </p>
-</div>
-
-  </section>  <!-- EDUCATION -->  <section id="education">
-    <div class="section-title">
-      <h2>Pendidikan</h2>
-      <p>Education</p>
-    </div><div class="cards">
-
-  <div class="card">
-    <h3>SMA Negeri 78 Jakarta</h3>
-    <p>Pendidikan menengah atas.</p>
-  </div>
-
-  <div class="card">
-    <h3>SMP Negeri 127 Jakarta</h3>
-    <p>Pendidikan menengah pertama.</p>
-  </div>
-
-  <div class="card">
-    <h3>SD Negeri Kebon Jeruk 04 Pagi</h3>
-    <p>Pendidikan sekolah dasar.</p>
-  </div>
-
-</div>
-
-  </section>  <!-- SKILLS -->  <section id="skills">
-    <div class="section-title">
-      <h2>Kemampuan</h2>
-      <p>Skills & Interests</p>
-    </div><div class="cards">
-
-  <div class="card">
-    <h3>💻 Teknologi</h3>
-    <p>
-      Memiliki ketertarikan pada komputer,
-      teknologi digital, dan internet.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>🎨 Kreativitas</h3>
-    <p>
-      Tertarik pada desain, editing foto,
-      editing video, dan pembuatan konten.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>🏀 Olahraga</h3>
-    <p>
-      Memiliki ketertarikan pada olahraga,
-      terutama aktivitas olahraga di lingkungan sekolah.
-    </p>
-  </div>
-
-</div>
-
-  </section>  <!-- PROJECTS -->  <section id="projects">
-    <div class="section-title">
-      <h2>Proyek & Kegiatan</h2>
-      <p>Projects & Activities</p>
-    </div><div class="project">
-
-  <div class="project-item">
-    <h3>Portofolio Digital</h3>
-    <p>
-      Membuat website portofolio pribadi sebagai media
-      untuk memperkenalkan profil dan karya.
-    </p>
-  </div>
-
-  <div class="project-item">
-    <h3>Proyek Sekolah</h3>
-    <p>
-      Berpartisipasi dalam berbagai tugas, proyek,
-      presentasi, dan kegiatan pembelajaran sekolah.
-    </p>
-  </div>
-
-  <div class="project-item">
-    <h3>Proyek PJOK</h3>
-    <p>
-      Mengikuti kegiatan dan proyek olahraga dalam
-      pembelajaran PJOK bersama kelompok.
-    </p>
-  </div>
-
-</div>
-
-  </section>  <!-- CONTACT -->  <section class="contact" id="contact">
-    <div class="section-title">
-      <h2>Contact Me</h2>
-      <p>Hubungi Zulfikar Alfansuri</p>
-    </div><p>
-  Ingin mengetahui lebih banyak tentang saya?
-</p>
+<h1>
+    Zulfikar<br>
+    <span class="gradient">Alfansuri</span>
+</h1>
 
 <p>
-  Kamu bisa menghubungi saya melalui Instagram.
+    Student, creative thinker, and technology enthusiast
+    from Jakarta. Welcome to my personal digital portfolio.
 </p>
 
-<a
-  href="https://www.instagram.com/karralsr/"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="button">
-  Instagram @karralsr
-</a>
+<div class="buttons">
 
-  </section>  <!-- FOOTER -->  <footer>
-    © 2026 Zulfikar Alfansuri. All Rights Reserved.
-  </footer></body>
+    <a href="#projects" class="btn primary">
+        Explore My Work
+    </a>
+
+    <a href="#contact" class="btn secondary">
+        Contact Me
+    </a>
+
+</div>
+
+</div></section><!-- ABOUT --><section id="about"><div class="container"><div class="label">01 — About Me</div>
+
+<h2 class="title">
+    Mengenal Zulfikar
+</h2>
+
+<p class="subtitle">
+    Saya adalah seorang pelajar yang memiliki ketertarikan
+    terhadap teknologi, kreativitas, olahraga, dan berbagai
+    aktivitas yang membantu saya berkembang.
+</p>
+
+
+<div class="about-grid">
+
+    <div class="glass">
+
+        <h3 style="margin-bottom:15px;">
+            Hello, I'm Zulfikar 👋
+        </h3>
+
+        <p>
+            Website ini merupakan portfolio pribadi saya.
+            Di sini saya membagikan profil, pendidikan,
+            kemampuan, proyek, dan berbagai kegiatan
+            yang pernah saya ikuti.
+        </p>
+
+    </div>
+
+
+    <div class="glass">
+
+        <div class="info">
+
+            <div class="info-box">
+                <small>Nama</small>
+                <strong>Zulfikar Alfansuri</strong>
+            </div>
+
+            <div class="info-box">
+                <small>Domisili</small>
+                <strong>Jakarta</strong>
+            </div>
+
+            <div class="info-box">
+                <small>Status</small>
+                <strong>Student</strong>
+            </div>
+
+            <div class="info-box">
+                <small>Interest</small>
+                <strong>Technology</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div></section><!-- EDUCATION --><section id="education"><div class="container"><div class="label">02 — Education</div>
+
+<h2 class="title">
+    Riwayat Pendidikan
+</h2>
+
+<p class="subtitle">
+    Perjalanan pendidikan yang telah saya tempuh.
+</p>
+
+
+<div class="cards">
+
+    <div class="card">
+        <div class="card-number">01</div>
+        <h3>SMA Negeri 78 Jakarta</h3>
+        <p>
+            Pendidikan sekolah menengah atas.
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="card-number">02</div>
+        <h3>SMP Negeri 127 Jakarta</h3>
+        <p>
+            Pendidikan sekolah menengah pertama.
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="card-number">03</div>
+        <h3>SD Negeri Kebon Jeruk 04 Pagi</h3>
+        <p>
+            Pendidikan sekolah dasar.
+        </p>
+    </div>
+
+</div>
+
+</div></section><!-- SKILLS --><section id="skills"><div class="container"><div class="label">03 — Skills</div>
+
+<h2 class="title">
+    Skills & Interests
+</h2>
+
+<p class="subtitle">
+    Beberapa bidang yang saya minati dan terus saya kembangkan.
+</p>
+
+
+<div class="skills">
+
+    <div class="skill">💻 Technology</div>
+    <div class="skill">🎨 Creative Design</div>
+    <div class="skill">🎬 Video Editing</div>
+    <div class="skill">📷 Photo Editing</div>
+    <div class="skill">🏀 Sports</div>
+    <div class="skill">🌐 Digital Media</div>
+    <div class="skill">🤝 Teamwork</div>
+    <div class="skill">🎤 Public Speaking</div>
+
+</div>
+
+</div></section><!-- PROJECTS --><section id="projects"><div class="container"><div class="label">04 — Projects</div>
+
+<h2 class="title">
+    Projects & Activities
+</h2>
+
+<p class="subtitle">
+    Beberapa proyek dan kegiatan yang pernah saya kerjakan
+    atau ikuti.
+</p>
+
+
+<div class="projects">
+
+    <div class="project">
+
+        <div class="project-icon">🌐</div>
+
+        <h3>Personal Portfolio</h3>
+
+        <p>
+            Membuat website portfolio pribadi menggunakan
+            HTML dan CSS dengan desain modern.
+        </p>
+
+    </div>
+
+
+    <div class="project">
+
+        <div class="project-icon">📚</div>
+
+        <h3>School Projects</h3>
+
+        <p>
+            Berbagai tugas, presentasi, dan proyek sekolah
+            yang dikerjakan secara individu maupun kelompok.
+        </p>
+
+    </div>
+
+
+    <div class="project">
+
+        <div class="project-icon">🏆</div>
+
+        <h3>Sports Activities</h3>
+
+        <p>
+            Mengikuti kegiatan dan proyek olahraga
+            dalam pembelajaran maupun aktivitas sekolah.
+        </p>
+
+    </div>
+
+</div>
+
+</div></section><!-- CONTACT --><section id="contact"><div class="container contact"><div class="label">05 — Contact</div>
+
+<h2 class="title">
+    Let's Connect
+</h2>
+
+<p class="subtitle" style="margin:auto;">
+    Untuk melihat aktivitas dan informasi terbaru,
+    kunjungi Instagram saya.
+</p>
+
+
+<div class="glass">
+
+    <h3>
+        Zulfikar Alfansuri
+    </h3>
+
+    <p style="margin-top:10px;color:#858591;">
+        Instagram
+    </p>
+
+    <a
+        href="https://www.instagram.com/karralsr/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="instagram">
+
+        Instagram @karralsr
+
+    </a>
+
+</div>
+
+</div></section><!-- FOOTER --><footer>© 2026 Zulfikar Alfansuri — Personal Portfolio
+
+</footer></body>
   </html>
